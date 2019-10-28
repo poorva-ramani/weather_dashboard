@@ -7,9 +7,10 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather forecast</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
@@ -21,19 +22,23 @@
         </div>
         <div class="row">
             <div class="col-4 bg-light border">
-                <h3>Search for a City:</h3>
-                <input id="searchInput" type="text" name="search" />
-                <button id="searchButton">Search</button>
+                <form class="form-inline m-2">
+                    <h3>Search for a City:</h3>
+                    <input id="searchInput" type="text" name="search" class="form-control"
+                        placeholder="Enter a city..." />
+                    <button id="searchButton" class="btn btn-info m-2">Search</button>
+                </form>
+                <div id="searchHistory" class="m-2 list-group"></div>
             </div>
             <div class="col-8 border mb-1">
-                <div class="row p-2 m-2">
-                    <h3>Current Weather:</h3>
+                <div class="row p-1 m-1">
+                    <h3>Current Weather: <span class="cityDetails"></span></h3>
                 </div>
-                <div class="row border p-3 m-2">
+                <div class="row border p-2 m-2">
                     <div class="results">
                     </div>
                 </div>
-                <div class="row p-2 m-2">
+                <div class="row p-1 m-1">
                     <h3>5-Day Forecast: <span class="city"></span></h3>
                 </div>
                 <div class="row forecastResults text-white m-2">
@@ -52,7 +57,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
